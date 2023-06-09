@@ -8,7 +8,10 @@ def main():
 
     # LINK TOKEN ADDRESSES & EXPLORER BASE URL
     chosen_chain_id = os.getenv('CHAIN_ID')
-    if chosen_chain_id == '11155111': # ETH Sepolia
+    if chosen_chain_id == '1': # ETH Mainnet
+        link_token_address = '0x514910771AF9Ca656af840dff83E8264EcF986CA'
+        explorer_url = 'https://etherscan.io/address'
+    elif chosen_chain_id == '11155111': # ETH Sepolia
         link_token_address = '0x779877A7B0D9E8603169DdbD7836e478b4624789'
         explorer_url = 'https://sepolia.etherscan.io/address'
     elif chosen_chain_id == '137': # POLY Mainnet
