@@ -3,7 +3,7 @@
 ## Pre-reqs
 (0) Install brownie, this repo used eth-brownie==`1.19.3`
 
-(1) ensure network is configured in brownie, with explorer url + api key [[ref](https://eth-brownie.readthedocs.io/en/stable/network-management.html#adding-a-new-network)]
+(1) ensure network is configured in brownie, with explorer url + api key if needed [[ref](https://eth-brownie.readthedocs.io/en/stable/network-management.html#adding-a-new-network)]
 ```
 brownie networks add Ethereum sepolia chainid=11155111 host=YOUR_RPC_URL explorer=https://api-sepolia.etherscan.io/api
 ```
