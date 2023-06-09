@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import os
-from brownie import accounts, Operator#, Oracle
+from brownie import accounts, Operator, Oracle
 
 def main():
     # Load your Ethereum account
