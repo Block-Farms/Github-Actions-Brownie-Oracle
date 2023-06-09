@@ -19,7 +19,7 @@ def main():
         explorer_url = 'https://mumbai.polygonscan.com/address'
     elif chosen_chain_id == '42161': # ARB Mainnet
         link_token_address = '0xf97f4df75117a78c1A5a0DBb814Af92458539FB4'
-        explorer_url = 'hhttps://arbiscan.io/address'
+        explorer_url = 'https://arbiscan.io/address'
 
     # Deploy the contract
     chosen_contract = os.getenv('CONTRACT_NAME')
