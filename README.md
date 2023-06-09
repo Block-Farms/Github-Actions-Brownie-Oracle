@@ -26,7 +26,7 @@ brownie run scripts/deploy.py --network sepolia
 ```
 
 ## Incorporation into Github Actions CI/CD:
-This repo can be cloned to be executed automatically on pushes/updates to the main/master branch with Github Actions. To implement this change the module source to your github cloned repo, and the following variables to your cloned repo > Settings > Secrets and variables > Actions:
+This repo can be cloned to be executed automatically on pushes/updates to the main/master branch with Github Actions. To implement this add the following variables to your cloned repo > Settings > Secrets and variables > Actions:
 
 RPC HTTP URL FOR BLOCKCHAIN CONNECTIVITY:
 ```
