@@ -28,9 +28,16 @@ brownie run scripts/deploy.py --network sepolia
 ## Incorporation into Github Actions CI/CD:
 This repo can be cloned to be executed automatically on pushes/updates to the main/master branch with Github Actions. To implement this change the module source to your github cloned repo, and the following variables to your cloned repo > Settings > Secrets and variables > Actions:
 
-EXPLORER URL API KEY FOR CONTRACT VERIFICATION:
+RPC HTTP URL FOR BLOCKCHAIN CONNECTIVITY:
+```
+RPC_URL=REDACTED
+```
+
+EXLORER URL API KEY FOR CONTRACT VERIFICATION:
 ```
 ETHERSCAN_TOKEN=REDACTED
+```EXPLORER URL API KEY FOR CONTRACT VERIFICATION:
+```ETHERSCAN_TOKEN=REDACTED
 ```
 
 HOT WALLET PRIVATE KEY DEPLOYING THE CONTRACT
