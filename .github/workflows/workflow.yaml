@@ -1,0 +1,36 @@
+name: Brownie Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9.13
+
+    - name: Install dependencies
+      run: pip install eth-brownie==1.19.3
+
+    - name: Add Brownie network
+      run: brownie networks add Ethereum sepolia chainid=11155111 host=${{ secrets.RPC_URL }} explorer=https://api-sepolia.etherscan.io/api
+
+    - name: Compile contracts
+      run: brownie compile
+
+    - name: Deploy contracts
+      env:
+        PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+        ETHERSCAN_TOKEN: ${{ secrets.ETHERSCAN_TOKEN }}
+        OWNER_ADDRESS: ${{ secrets.OWNER_ADDRESS }}
+        NODE_ADDRESS: ${{ secrets.NODE_ADDRESS }}
+      run: brownie run scripts/deploy.py --network sepolia
